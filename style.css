@@ -1,0 +1,159 @@
+:root {
+    --gold: #C5A059;
+    --dark: #0A0A0A;
+    --light-dark: #121212;
+    --white: #FFFFFF;
+    --grey: #888888;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+html { scroll-behavior: smooth; }
+body { background-color: var(--dark); color: var(--white); overflow-x: hidden; width: 100%; }
+
+/* Navigation */
+/* Fixed Navbar Layout */
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Sabhi devices ke liye balanced padding */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.insta-icon {
+    color: var(--grey);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-cta {
+    text-decoration: none;
+    border: 1px solid var(--gold);
+    padding: 8px 18px;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap; /* Text ko niche girne se rokega */
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.nav-cta:hover {
+    background: var(--gold);
+    color: var(--dark);
+}
+
+/* Mobile Specific Fix for Call Button */
+@media (max-width: 400px) {
+    .logo {
+        font-size: 18px;
+    }
+    .nav-cta {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+    .nav-right {
+        gap: 10px;
+    }
+}
+
+.logo { font-family: 'Cinzel', serif; font-size: 22px; letter-spacing: 2px; }
+.logo span { color: var(--gold); font-weight: 700; }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 25px; }
+.nav-links a { text-decoration: none; color: var(--white); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+.nav-cta { border: 1px solid var(--gold); padding: 8px 20px; color: var(--gold) !important; }
+
+/* Hero */
+.hero {
+    height: 100vh; width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=90');
+    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    padding: 0 20px;
+}
+
+.main-title { font-family: 'Cinzel', serif; font-size: clamp(32px, 8vw, 75px); letter-spacing: 8px; margin: 15px 0; }
+.sub-title { color: var(--gold); letter-spacing: 4px; font-size: 12px; font-weight: 600; }
+.hero-p { color: var(--grey); font-size: clamp(14px, 2vw, 18px); margin-bottom: 35px; max-width: 600px; }
+.hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+.btn-gold, .btn-outline {
+    padding: 15px 35px; text-decoration: none; font-weight: 600; font-size: 14px;
+    letter-spacing: 1px; transition: 0.3s; min-width: 180px;
+}
+.btn-gold { background: var(--gold); color: var(--dark); }
+.btn-outline { border: 1px solid var(--white); color: var(--white); }
+
+/* Collection */
+.collection { padding: 80px 8%; }
+.section-head h3 { font-family: 'Cinzel', serif; font-size: 32px; text-align: center; }
+.gold-line { width: 50px; height: 2px; background: var(--gold); margin: 20px auto 50px; }
+
+.property-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 40px;
+}
+
+.premium-card { background: var(--light-dark); border: 1px solid #1a1a1a; }
+.img-box { height: 350px; overflow: hidden; position: relative; }
+.img-box img { width: 100%; height: 100%; object-fit: cover; }
+.card-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: 0.4s;
+}
+.premium-card:hover .card-overlay { opacity: 1; }
+.wa-btn { background: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; font-size: 14px; }
+
+.card-text { padding: 30px; }
+.location { color: var(--gold); font-size: 10px; letter-spacing: 2px; font-weight: 700; }
+.card-text h4 { font-family: 'Cinzel', serif; font-size: 22px; margin: 10px 0; }
+.price-tag { margin-top: 20px; font-weight: 700; color: var(--gold); border-top: 1px solid #222; padding-top: 20px; }
+
+/* Contact Section */
+.direct-contact { padding: 100px 5%; text-align: center; background: #050505; }
+.direct-contact h2 { font-family: 'Cinzel', serif; font-size: clamp(28px, 5vw, 40px); margin-bottom: 30px; }
+.contact-wrap { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+.big-call-btn { font-size: clamp(20px, 4vw, 35px); color: var(--gold); text-decoration: none; font-family: 'Cinzel', serif; }
+.insta-footer { color: var(--grey); text-decoration: none; font-size: 14px; }
+
+footer { padding: 40px; text-align: center; color: #444; font-size: 10px; }
+
+/* =============================================
+   MOBILE OVERRIDES 
+   ============================================= */
+@media (max-width: 768px) {
+    .glass-nav { padding: 15px 5%; }
+    .nav-links { gap: 15px; }
+    .nav-links a:not(.nav-cta) { display: none; } /* Mobile par collection link hide karo, sirf Call dikhao */
+    
+    .hero { padding-top: 60px; }
+    .main-title { letter-spacing: 4px; }
+    .hero-btns { flex-direction: column; width: 100%; align-items: center; }
+    .btn-gold, .btn-outline { width: 90%; }
+    
+    .collection { padding: 60px 5%; }
+    .property-grid { grid-template-columns: 1fr; } /* Force single column on mobile */
+    .img-box { height: 280px; }
+}
