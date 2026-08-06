@@ -1,90 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OM BUSINESS | Premium Real Estate</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Happy Birthday! Kancha Ji🌸</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="glass-nav">
-    <div class="nav-container">
-        <div class="logo">OM <span>BUSINESS</span></div>
-        <div class="nav-right">
-            <a href="https://www.instagram.com/broinsidehit_1610" target="_blank" class="insta-icon">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="tel:9198924465" class="nav-cta">Call Now</a>
+    <div class="container">
+        
+        <div id="lock-screen">
+            <h2 class="radha-title">🌸 Radhey Radhey 🌸</h2>
+            <p class="sub-text">Apna Birthday surprise dekhne ke liye 108 baar <b>Radha Naam</b> ka jaap karein!</p>
+            
+            <div class="counter-display" id="count">0 / 108</div>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+
+            <button class="jaap-btn" id="jaapBtn" onclick="countJaap()">📿 Radha Radha</button>
         </div>
+
+        <div id="birthday-content">
+            <h1>🎉 Happy Birthday! 🎂<br>Laxmi(Kancha Ji!)</h1>
+            
+            <p class="blessing-text">
+                ✨ Shri Radha Rani ki kripa tum par hamesha bani rahe! ✨
+            </p>
+
+            <div class="badge-container">
+                <button class="custom-btn">Pyari Behan 💖</button>
+                <button class="custom-btn">Best Friend 🌸</button>
+            </div>
+
+            <div class="quote-box">
+                                    Ek pyaari si dost aur behan jaisa saath ho tum,
+
+                    Hriday se pure aur Radha Rani ka aashirwaad ho tum.
+
+                    Radhey-Radhey ke jaap se roshan rahe tera har din,
+
+                    Mubarak ho tumhe ye khushiyon bhara janamdin!
+
+                    🎉 Happy Birthday! Radha Ji Tumhe Hamesha Khush Rakhein! 🎉
+            </div>
+
+            <button class="surprise-btn" onclick="openSurprise()">Ek Chota Sa Surprise Click Karo 🎁</button>
+
+            
+        <div id="surpriseModal" class="modal">
+            <div class="modal-content">
+                    <span class="close-btn" onclick="closeSurprise()">&times;</span>
+        
+                    <div id="radhaStep" class="surprise-step active-step">
+                        <h2>✨ Pehle Radha Rani Ke Darshan ✨</h2>
+                        <p class="spiritual-msg">Pehle Radha Rani ke darshan karke niche Radhe Radhe par click karke aage badhein! 🙏🌸</p>
+            
+                        <div class="divine-img-box">
+                            <img src="radha-krishna.jpg" alt="Radha Krishna" class="divine-photo">
+                        </div>
+
+                        <button class="custom-btn radhe-btn" onclick="showFriendPhotos()">🌸 Radhe Radhe 🌸</button>
+                    </div>
+
+                    <div id="friendStep" class="surprise-step">
+                        <h2>💖 Teri Pyaari Yaadein & Photos 📸</h2>
+                        <p class="sub-text">Radha Rani Ka Aashirwaad Hamesha Tere Saath Rahe! ✨</p>
+            
+                            <div class="photo-gallery">
+                                <div class="gallery-card">
+                                    <img src="friend1.jpg" alt="Beautiful Moment 1">
+                                    <p>Beautiful Smile 😊</p>
+                                </div>
+                                <div class="gallery-card">
+                                    <img src="friend2.jpg" alt="Beautiful Moment 2">
+                                    <p>Best Friend / Pyaari Behan 💖</p>
+                                </div>
+                                <div class="gallery-card">
+                                    <img src="friend3.jpg" alt="Beautiful Moment 3">
+                                    <p>Sweet Memories ✨</p>
+                                </div>
+                                <div class="gallery-card">
+                                    <img src="friend4.jpg" alt="Sweet Memories">
+                                    <p>Khoobsurat Yaadein 📸💫</p>
+                                </div>
+                                <div class="gallery-card">
+                                    <img src="friend5.jpg" alt="Cutest Person">
+                                    <p>Sabse Nautanki Aur Sweet 🙈👑</p>
+                                </div>
+                                <div class="gallery-card">
+                                    <img src="friend6.jpg" alt="Special Blessing">
+                                    <p>Glamour Level 100/100 💃✨</p>
+                                </div>
+                                <div class="next-btn-container">
+                                        <button id="nextSectionBtn" class="action-btn">Aage Badhiye ➡️</button>
+                                </div>
+                                
+                            </div>
+                            
+                    </div>
+                    <div id="doctorFutureSection" class="doctor-section hidden">
+    
+    <div class="doctor-card">
+        <div class="stethoscope-icon">🩺</div>
+        <h2>Future Doctor! 🩺👩‍⚕️</h2>
+        <p class="wish-text">
+            🩺✨ <br>
+            Aap jo bhi mehnat kar rahi hain, Radha Rani Ji aapki har kadam par help karein, <br>
+            aapke saare sapne poore karein aur aapko dher saari kamyabi dein! 🙏🌸
+        </p>
     </div>
-</nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2 class="sub-title">ESTATE & LEGACY</h2>
-            <h1 class="main-title">Own The Extraordinary</h1>
-            <p class="hero-p">Exclusive access to premium listings curated for the elite.</p>
-            <div class="hero-btns">
-                <a href="#collection" class="btn-gold">View Collection</a>
-                <a href="tel:9198924465" class="btn-outline">Contact Advisor</a>
+    <div class="bhai-message-card">
+        <h3> Aapke Bhai Ki Taraf Se 💖</h3>
+        <p>Aapko ek baar phir se Birthday ki bohot bohot badhaiyan, meri pyari behan! Hamesha aise hi muskurati raho! 🎂🥳🎉</p>
+    </div>
+
+    <div class="final-wishes">
+        <h1 class="thankyou-anim">✨ Thank You So Much! ✨</h1>
+        <h2 class="radhe-anim">🌸 Radhe Radhe! 🌸</h2>
+    </div>
+
+    <div class="developer-info">
+        <p>Created with ❤️ by <strong>Om Ji Tripathi</strong></p>
+        <a href="https://dipak01dp.github.io/om-portfolio-/" target="_blank" class="portfolio-btn">Visit My Portfolio 🌐</a>
+    </div>
+
+    <div class="restart-btn-container">
+        <button id="backToTopBtn" class="restart-btn">🔄 Main Page Pe Wapas Jayein</button>
+    </div>
             </div>
         </div>
-    </section>
-
-    <section id="collection" class="collection">
-        <div class="section-head">
-            <h3>Exclusive Portfolio</h3>
-            <div class="gold-line"></div>
         </div>
-
-        <div class="property-grid">
-            <div class="premium-card">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" alt="Mansion">
-                    <div class="card-overlay">
-                        <a href="https://wa.me/9198924465" class="wa-btn"><i class="fab fa-whatsapp"></i> Inquire</a>
-                    </div>
-                </div>
-                <div class="card-text">
-                    <span class="location">SOUTH DELHI</span>
-                    <h4>The Imperial Estate</h4>
-                    <p>Grand architecture with a private helipad and 7-star amenities.</p>
-                    <div class="price-tag">Price on Request</div>
-                </div>
-            </div>
-
-            <div class="premium-card">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80" alt="Penthouse">
-                    <div class="card-overlay">
-                        <a href="https://wa.me/9198924465" class="wa-btn"><i class="fab fa-whatsapp"></i> Inquire</a>
-                    </div>
-                </div>
-                <div class="card-text">
-                    <span class="location">GURGAON SKYLINE</span>
-                    <h4>Aether Penthouse</h4>
-                    <p>Automated smart home with 360-degree views of the city.</p>
-                    <div class="price-tag">Price on Request</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="direct-contact">
-        <h2>Secure Your Legacy</h2>
-        <div class="contact-wrap">
-            <a href="tel:9198924465" class="big-call-btn">+91 9198924465</a>
-            <a href="https://www.instagram.com/broinsidehit_1610" target="_blank" class="insta-footer">Follow @broinsidehit_1610</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 OM BUSINESS | Real Estate Excellence</p>
-    </footer>
-
-    <script src="js/script.js"></script>
+</div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
